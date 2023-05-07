@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tpss', function (Blueprint $table) {
+        Schema::create('tps', function (Blueprint $table) {
             $table->id();
             $table->string('nama_tps');
             $table->decimal('longitude', 10, 7);

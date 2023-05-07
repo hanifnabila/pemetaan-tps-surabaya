@@ -67,6 +67,32 @@
             .openOn(map);
     </script>
 
+
+<form action="{{ route('tps.store') }}" method="POST">
+    @csrf
+    <div>
+        <label for="nama_tps">Nama TPS</label>
+        <input type="text" name="nama_tps" id="nama_tps" required>
+    </div>
+    <div>
+        <label for="longitude">Longitude</label>
+        <input type="text" name="longitude" id="longitude" required>
+    </div>
+    <div>
+        <label for="latitude">Latitude</label>
+        <input type="text" name="latitude" id="latitude" required>
+    </div>
+    <div>
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat" required></textarea>
+    </div>
+    <div>
+        <label for="volume">Volume</label>
+        <input type="text" name="volume" id="volume" required>
+    </div>
+    <button type="submit">Simpan</button>
+</form>
+
 </body>
 
 </html>

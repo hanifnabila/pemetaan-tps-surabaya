@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Tps extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nama_tps',
+        'longitude',
+        'latitude',
+        'alamat',
+        'volume',
+    ];
 }

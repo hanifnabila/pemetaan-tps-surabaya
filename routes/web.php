@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TpsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/maps', function () {
     return view('maps');
 });
+
+Route::post('/tambah', [TpsController::class, 'store'])->name('tps.store');
+Route::get('/data', [TpsController::class, 'index'])->name('tps.index');
+Route::resource('/index', TpsController::class);
