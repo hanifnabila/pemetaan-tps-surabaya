@@ -7,6 +7,11 @@
   <title>@yield('title')</title>
   <link rel="shortcut icon" type="image/png" href="images/logos/favicon.png" />
   <link rel="stylesheet" href="css/styles.min.css" />
+  <link rel="stylesheet" href="css/styleMaps.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
               <span class="hide-menu">UI COMPONENTS</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+              <a class="sidebar-link" href="mapsExample" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -57,7 +62,7 @@
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
-                <span class="hide-menu">Daftar Tps</span>
+                <span class="hide-menu">Daftar TPS</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -65,7 +70,7 @@
                 <span>
                   <i class="ti ti-file-description"></i>
                 </span>
-                <span class="hide-menu">Forms</span>
+                <span class="hide-menu">Tambah TPS</span>
               </a>
             </li>
           </ul>
@@ -152,6 +157,7 @@
       </div>
     </div>
   </div>
+  <script src="js/maps.js"></script>
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/sidebarmenu.js"></script>
