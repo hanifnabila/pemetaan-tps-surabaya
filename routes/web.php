@@ -18,12 +18,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 Route::get('/daftarTps', function () {
-    return view('home');
+    return view('daftarTps');
 });
 Route::get('/tambahData', function () {
     return view('tambahData');
 });
 
-Route::post('/tambah', [TpsController::class, 'store'])->name('tps.store');
-Route::get('/data', [TpsController::class, 'index'])->name('tps.index');
+Route::post('/tambahData', [TpsController::class, 'store'])->name('tps.store');
+Route::get('/daftarTps', [TpsController::class, 'index'])->name('tps.index');
 Route::resource('/index', TpsController::class);

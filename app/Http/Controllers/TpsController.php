@@ -14,9 +14,7 @@ class TpsController extends Controller
     public function index()
     {
         $tps = Tps::all();
-        return view('home', compact('tps'));
-
-        redirect('/home');
+        return view('daftarTps', compact('tps'));
     }
 
     /**
@@ -33,11 +31,12 @@ class TpsController extends Controller
         ]);
 
         if ($tps) {
-            return response()->json([
-                'status' => true,
-                'message' => 'Data TPS berhasil disimpan!',
-                'data' => $tps,
-            ], 200);
+            // return response()->json([
+            //     'status' => true,
+            //     'message' => 'Data TPS berhasil disimpan!',
+            //     'data' => $tps,
+            // ], 200);
+            return redirect('/tambahData');
         } else {
             return response()->json([
                 'success' => false,
