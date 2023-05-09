@@ -34,6 +34,8 @@
 <body>
 
     <div id="map" style="height: 500px;"></div>
+
+
     <script>
         const map = L.map('map').setView([-7.250445, 112.768845], 13);
 

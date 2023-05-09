@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/maps', function () {
-    return view('maps');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+Route::get('/daftarTps', function () {
+    return view('home');
+});
+Route::get('/tambahData', function () {
+    return view('tambahData');
 });
 
 Route::post('/tambah', [TpsController::class, 'store'])->name('tps.store');

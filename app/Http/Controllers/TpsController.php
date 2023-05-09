@@ -14,7 +14,9 @@ class TpsController extends Controller
     public function index()
     {
         $tps = Tps::all();
-        return view('index', compact('tps'));
+        return view('home', compact('tps'));
+
+        redirect('/home');
     }
 
     /**
