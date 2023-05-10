@@ -23,8 +23,8 @@ Route::get('/daftarTps', function () {
 Route::get('/tambahData', function () {
     return view('tambahData');
 });
-Route::get('/mapsExample', function () {
-    return view('mapsExample');
+Route::get('/maps', function () {
+    return view('maps');
 });
 
 Route::post('/tambahData', [TpsController::class, 'store'])->name('tps.store');

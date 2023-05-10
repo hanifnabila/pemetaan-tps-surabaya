@@ -4,7 +4,7 @@
 
 @section('container')
     <h1>Daftar TPS</h1>
-    <table class="table">
+    <table id="datatable" class="table dislpay">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Nama TPS</th>
