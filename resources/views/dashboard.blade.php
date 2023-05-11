@@ -1,7 +1,5 @@
 @extends('layouts.main')
 
-@section('title', 'Home')
-
 @section('container')
 <div class="card">
     <div class="card-header">
