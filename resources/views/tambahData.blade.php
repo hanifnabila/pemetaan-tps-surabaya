@@ -23,6 +23,10 @@
                     <input type="text" name="alamat" class="form-control" id="alamat">
                 </div>
                 <div class="mb-3">
+                    <label for="kecamatan" class="form-label">Kecamatan</label>
+                    <input type="text" name="kecamatan" class="form-control" id="kecamatan">
+                </div>
+                <div class="mb-3">
                     <label for="volume"  class="form-label">Volume</label>
                     <input type="text" name="volume" class="form-control" id="volume">
                 </div>
