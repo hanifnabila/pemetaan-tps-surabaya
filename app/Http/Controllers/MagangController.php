@@ -24,7 +24,7 @@ class MagangController extends Controller
     public function store(Request $request)
     {
         $magang = Magang::create([
-            'tempat_magang' => $request->input('tempat_magang'),
+            'tempat_magang' => $request->input('tempat-magang'),
             'longitude' => $request->input('longitude'),
             'latitude' => $request->input('latitude'),
             'alamat' => $request->input('alamat'),

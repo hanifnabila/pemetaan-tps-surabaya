@@ -18,12 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-
-Route::get('/daftarTps', function () {
-    return view('daftarTps');
-});
 Route::get('/daftarMagang', function () {
-    return view('magang.index');
+    return view('daftarMagang');
 });
 Route::get('/tambahData', function () {
     return view('tambahData');
@@ -31,11 +27,3 @@ Route::get('/tambahData', function () {
 Route::get('/maps', function () {
     return view('maps');
 });
-
-// Route::post('/tambahData', [TpsController::class, 'store'])->name('tps.store');
-Route::get('/daftarTps', [TpsController::class, 'index'])->name('tps.index');
-// Route::resource('/index', TpsController::class);
-
-Route::apiResource('tps', TpsController::class);
-
-// Route::get('/magang', [MagangController::class, 'index']);

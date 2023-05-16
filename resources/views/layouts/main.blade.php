@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="daftarMagang" aria-expanded="false">
+                            <a class="sidebar-link" href="/daftarMagang" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-cards"></i>
                                 </span>

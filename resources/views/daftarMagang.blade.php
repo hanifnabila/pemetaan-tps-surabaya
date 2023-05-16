@@ -7,12 +7,12 @@
     <table id="datatable" class="table dislpay">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Nama TPS</th>
+                <th scope="col">Nama Perusahaan</th>
                 <th scope="col">Longitude</th>
                 <th scope="col">Latitude</th>
                 <th scope="col">Alamat</th>
                 <th scope="col">Kecamatan</th>
-                <th scope="col">Volume</th>
+                <th scope="col">Deskripsi</th>
             </tr>
         </thead>
         <tbody>
