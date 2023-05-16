@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TpsController;
+use App\Http\Controllers\MagangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
 Route::get('/daftarTps', function () {
     return view('daftarTps');
+});
+Route::get('/daftarMagang', function () {
+    return view('magang.index');
 });
 Route::get('/tambahData', function () {
     return view('tambahData');
@@ -27,6 +32,10 @@ Route::get('/maps', function () {
     return view('maps');
 });
 
-Route::post('/tambahData', [TpsController::class, 'store'])->name('tps.store');
+// Route::post('/tambahData', [TpsController::class, 'store'])->name('tps.store');
 Route::get('/daftarTps', [TpsController::class, 'index'])->name('tps.index');
-Route::resource('/index', TpsController::class);
+// Route::resource('/index', TpsController::class);
+
+Route::apiResource('tps', TpsController::class);
+
+// Route::get('/magang', [MagangController::class, 'index']);
