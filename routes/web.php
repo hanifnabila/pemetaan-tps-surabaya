@@ -18,3 +18,5 @@ Route::get('/maps', function () {
     return view('maps');
 });
 Route::apiResource('magang', MagangController::class);
+
+Route::get('/titik/json', [MagangController::class, 'titik']);

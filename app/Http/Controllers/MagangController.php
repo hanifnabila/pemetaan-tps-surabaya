@@ -4,18 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Magang;
 use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
 
 
 class MagangController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $magang = Magang::all();
         return view('daftarMagang', compact('magang'));
+    }
+
+    public function titik(){
+        $result = Magang::all();
+        return json_encode($result);
     }
 
     /**

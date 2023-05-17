@@ -13,21 +13,12 @@
 
         L.marker([-7.282919, 112.795343], ).addTo(map);
 
-        fetch('/geojson-data')
-        .then(response => response.json())
-        .then(data => {
-            L.geoJSON(data, {
-                pointToLayer: function(feature, latlng) {
-                    return L.marker(latlng); // Atur tampilan markernya sesuai kebutuhan Anda
-                },
-                onEachFeature: function(feature, layer) {
-                    if (feature.properties) {
-                        layer.bindPopup(feature.properties.name); // Atur konten popup sesuai kebutuhan Anda
-                    }
-                }
-            }).addTo(map);
+        $(document).ready(function() {
+            $.getJSON('titik/json', function(data) {
+                $.each(data, function(index) {
+                    L.marker([data[index].longitude,data[index].latitude]).addTo(map);
+                });
+            });
         });
-
     </script>
-
 @endsection
