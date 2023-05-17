@@ -14,6 +14,7 @@ class Magang extends Model
         'longitude',
         'latitude',
         'alamat',
+        'kecamatan',
         'deskripsi',
     ];
 }

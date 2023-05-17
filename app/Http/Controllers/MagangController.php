@@ -15,7 +15,7 @@ class MagangController extends Controller
     public function index()
     {
         $magang = Magang::all();
-        return response()->json($magang);
+        return view('daftarMagang', compact('magang'));
     }
 
     /**
@@ -28,6 +28,7 @@ class MagangController extends Controller
             'longitude' => $request->input('longitude'),
             'latitude' => $request->input('latitude'),
             'alamat' => $request->input('alamat'),
+            'kecamatan' => $request->input('kecamatan'),
             'deskripsi' => $request->input('deskripsi')
         ]);
 
@@ -67,5 +68,10 @@ class MagangController extends Controller
     public function destroy(Magang $magang)
     {
         //
+    }
+
+    public function getLocation() {
+        $location = Magang::all();
+        return $location;
     }
 }

@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Magang;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TpsController;
 use App\Http\Controllers\MagangController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MapsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 Route::get('/daftarMagang', function () {
-    return view('daftarMagang');
+    $magang = Magang::all();
+    return view('daftarMagang', compact('magang'));
 });
 Route::get('/tambahData', function () {
     return view('tambahData');
@@ -27,3 +30,8 @@ Route::get('/tambahData', function () {
 Route::get('/maps', function () {
     return view('maps');
 });
+Route::apiResource('magang', MagangController::class);
+
+// Route::get('/geojson-data', 'GeoJSONController@getData');
+
+Route::apiResource('maps', MapsController::class);

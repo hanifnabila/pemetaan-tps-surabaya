@@ -62,7 +62,7 @@
                                 <span>
                                     <i class="ti ti-cards"></i>
                                 </span>
-                                <span class="hide-menu">Daftar TPS</span>
+                                <span class="hide-menu">Daftar Magang</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -70,7 +70,7 @@
                                 <span>
                                     <i class="ti ti-file-description"></i>
                                 </span>
-                                <span class="hide-menu">Tambah TPS</span>
+                                <span class="hide-menu">Tambah Perusahaan</span>
                             </a>
                         </li>
                     </ul>

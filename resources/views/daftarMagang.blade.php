@@ -16,15 +16,16 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($magang as $data)
+            @foreach ($magang as $data)
                 <tr>
                     <td>{{ $data->tempat_magang }}</td>
                     <td>{{ $data->longitude }}</td>
                     <td>{{ $data->latitude }}</td>
                     <td>{{ $data->alamat }}</td>
+                    <td>{{ $data->kecamatan }}</td>
                     <td>{{ $data->deskripsi }}</td>
                 </tr>
-            @endforeach --}}
+            @endforeach
         </tbody>
     </table>
     <script>
