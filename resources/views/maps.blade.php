@@ -16,9 +16,15 @@
         $(document).ready(function() {
             $.getJSON('titik/json', function(data) {
                 $.each(data, function(index) {
-                    L.marker([data[index].longitude,data[index].latitude]).addTo(map);
+                    L.marker([data[index].longitude, data[index].latitude], ).addTo(map);
                 });
             });
+        });
+
+        var icon = L.icon({
+            iconUrl: 'public/images/logos/favicon.png', // Ganti dengan path ikon yang sesuai
+            iconSize: [32, 32], // Atur ukuran ikon
+            iconAnchor: [16, 32], // Atur titik ancor ikon (titik yang menunjuk ke lokasi pada peta)
         });
     </script>
 @endsection
