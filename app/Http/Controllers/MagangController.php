@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Magang;
 use Illuminate\Http\Request;
+use GeoJson\Feature\Feature;
+use GeoJson\Feature\FeatureCollection;
+use GeoJson\Geometry\Point;
 
 
 class MagangController extends Controller
@@ -18,6 +21,26 @@ class MagangController extends Controller
     public function titik(){
         $result = Magang::all();
         return json_encode($result);
+    }
+
+    public function lokasi($id)
+    {
+        $data = Magang::find($id);
+        return json_encode($data);
+    }
+
+    function showProperties()
+    {
+        $properties = Magang::all();
+
+        $features = [];
+
+        foreach ($properties as $property) {
+            $point = new Point([$property->longitude, $property->latitude]);
+            $properties = [
+                'tempat_magang' => $property->tempat_magang
+            ];
+        }
     }
 
     /**
@@ -51,9 +74,14 @@ class MagangController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Magang $magang)
+    public function show($id)
     {
-        //
+        $data = Magang::find($id);
+        if(!$data) {
+            abort(404);
+        }
+
+        return json_encode($data);
     }
 
     /**

@@ -20,3 +20,4 @@ Route::get('/maps', function () {
 Route::apiResource('magang', MagangController::class);
 
 Route::get('/titik/json', [MagangController::class, 'titik']);
+Route::get('/titik/lokasi/{id}', [MagangController::class, 'lokasi']);

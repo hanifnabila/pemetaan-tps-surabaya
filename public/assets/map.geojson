@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "tempat_magang": "Surabaya",
+            "id": 2
+        },
+        "geometry": {
+            "coordinates": [112.79031259347641, -7.305201889015706],
+            "type": "Point"
+        },
+        "id": 0
+    }, {
+        "type": "Feature",
+        "properties": {
+            "tempat_magang": "Kediri",
+            "id": 1
+        },
+        "geometry": {
+            "coordinates": [112.78813843346649, -7.312526307469071],
+            "type": "Point"
+        },
+        "id": 1
+    }]
+}

@@ -11,20 +11,20 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         }).addTo(map);
 
-        L.marker([-7.282919, 112.795343], ).addTo(map);
-
         $(document).ready(function() {
             $.getJSON('titik/json', function(data) {
                 $.each(data, function(index) {
-                    L.marker([data[index].longitude, data[index].latitude], ).addTo(map);
+                    let marker = L.marker([data[index].longitude, data[index].latitude],).addTo(map);
+                    $.getJSON('titik/lokasi/'+data[index].id, function(detail) {
+                    marker.on('click',(e)=>{
+                            var html = '<h5>Nama Lokasi : '+detail.tempat_magang+'</h5>';
+                            html += '<h6>Alamat :'+detail.alamat+'</h6>';
+
+                            marker.bindPopup(html);
+                            });
+                        });
                 });
             });
-        });
-
-        var icon = L.icon({
-            iconUrl: 'public/images/logos/favicon.png', // Ganti dengan path ikon yang sesuai
-            iconSize: [32, 32], // Atur ukuran ikon
-            iconAnchor: [16, 32], // Atur titik ancor ikon (titik yang menunjuk ke lokasi pada peta)
         });
     </script>
 @endsection
