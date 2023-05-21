@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-    <link rel="shortcut icon" type="image/png" href="images/logos/favicon.png" />
-    <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="stylesheet" href="css/styleMaps.css">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('images/logos/favicon.png') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styleMaps.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
@@ -27,7 +27,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="dashboard" class="text-nowrap logo-img">
-                        <img src="images/logos/dark-logo.svg" width="180" alt="" />
+                        <img src="{{ asset('images/logos/dark-logo.svg') }}" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -41,7 +41,7 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="dashboard" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ asset('dashboard') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
@@ -53,7 +53,7 @@
                             <span class="hide-menu">UI COMPONENTS</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="maps" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ asset('maps') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-article"></i>
                                 </span>
@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/daftarMagang" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ asset('magang') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-cards"></i>
                                 </span>
@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/tambahData" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ asset('tambahData') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-file-description"></i>
                                 </span>
@@ -83,7 +83,7 @@
                                 <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Selamat Siang</h6>
                             </div>
                             <div class="unlimited-access-img">
-                                <img src="images/backgrounds/rocket.png" alt="" class="img-fluid">
+                                <img src="{{ asset('images/backgrounds/rocket.png') }}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/profile/user-1.jpg" alt="" width="35" height="35"
+                                    <img src="{{ asset('images/profile/user-1.jpg') }}" alt="" width="35" height="35"
                                         class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"

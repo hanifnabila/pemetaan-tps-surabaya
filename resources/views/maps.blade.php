@@ -19,6 +19,7 @@
                     marker.on('click',(e)=>{
                             var html = '<h5>Nama Lokasi : '+detail.tempat_magang+'</h5>';
                             html += '<h6>Alamat :'+detail.alamat+'</h6>';
+                            html += '<p><a href="/detail/'+detail.id+'">Detail</a></p>';
 
                             marker.bindPopup(html);
                             });
