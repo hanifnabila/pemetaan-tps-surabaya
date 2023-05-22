@@ -1,7 +1,9 @@
 @extends('layouts.main')
 
 @section('container')
-    <div id="map" style="height: 500px;"></div>
+<div class="col-12">
+
+    <div id="map" style="width: 1000px; height: 530px"></div>
 
     <script>
         var map = L.map('map').setView([-7.250445, 112.768845], 13);
@@ -39,4 +41,5 @@
             });
         });
     </script>
+</div>
 @endsection

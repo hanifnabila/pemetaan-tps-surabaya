@@ -145,7 +145,7 @@
             <div class="container-fluid">
                 <!--  Row 1 -->
                 <div class="row">
-                    <div class="col-lg-8 d-flex align-items-strech mx-auto">
+                    <div class="col-lg-12 d-flex align-items-strech mx-auto">
                         <div class="card w-100">
                             <div class="card-body">
                                 @yield('container')

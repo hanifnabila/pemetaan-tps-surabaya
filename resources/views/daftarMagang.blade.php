@@ -29,19 +29,6 @@
         </tbody>
     </table>
     <script>
-        $(document).ready(function() {
-            $('#datatable').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": "{{ url('api/magang') }}",
-                "columns": [
-                    { "data": "tempat_magang" },
-                    { "data": "longitude" },
-                    { "data": "latitude" },
-                    { "data": "alamat" },
-                    { "data": "deskripsi" }
-                ]
-            });
-        });
+        let table = new DataTable('#myTable');
     </script>
 @endsection

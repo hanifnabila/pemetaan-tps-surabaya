@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('container')
+<div class="col-8">
+
+</div>
     <h5 class="card-title fw-semibold mb-4">Tambah Tempat Magang</h5>
     <div class="card">
         <div class="card-body ">
