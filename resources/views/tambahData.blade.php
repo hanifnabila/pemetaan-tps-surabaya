@@ -7,7 +7,7 @@
     <h5 class="card-title fw-semibold mb-4">Tambah Tempat Magang</h5>
     <div class="card">
         <div class="card-body ">
-            <form action="{{ route('magang.store') }}" method="POST">
+            <form action="{{ route('magang.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="tempat-magang" class="form-label">Nama Perusahaan</label>
@@ -33,6 +33,10 @@
                     <label for="deskripsi"  class="form-label">Deskripsi</label>
                     <input type="text" name="deskripsi" class="form-control" id="deskripsi">
                 </div>
+                <div class="mb-3">
+                    <label for="gambar" class="form-label">Upload Gambar</label>
+                    <input class="form-control" type="file" id="gambar" name="gambar">
+                  </div>
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </form>
         </div>

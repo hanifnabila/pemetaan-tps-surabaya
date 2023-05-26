@@ -4,7 +4,7 @@
 
 @section('container')
     <img style="width:150px;"
-        src="https://yt3.googleusercontent.com/gT-42sxVf4mlb1GglgSPW5xb3v7XpCgTzR5JBTtJ8WYA_bH2T58CwPO6xG8cflPyXlH5q3oGgg=s900-c-k-c0x00ffffff-no-rj"
+        src="{{ asset('storage/' . $data->path_gambar) }}"
         alt="">
     <h1>Nama Magang</h1>
     <h6>Domainwebsite.com</h6>
