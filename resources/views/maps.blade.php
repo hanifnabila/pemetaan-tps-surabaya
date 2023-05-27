@@ -54,7 +54,7 @@
                 };
 
                 var popupContent = "Your location : " + latitude + ", " + longitude + ".";
-                popupContent += '<br><a href="{{ route('magang.store') }}?latitude=' + latitude + '&longitude=' +
+                popupContent += '<br><a href="{{ asset('tambahData') }}?latitude=' + latitude + '&longitude=' +
                     longitude + '">Add new raod condition here</a>';
 
                 theMarker = L.marker([latitude, longitude]).addTo(map);
