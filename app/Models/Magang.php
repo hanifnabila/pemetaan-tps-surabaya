@@ -16,5 +16,7 @@ class Magang extends Model
         'alamat',
         'kecamatan',
         'deskripsi',
+        'path_gambar'
     ];
+
 }
