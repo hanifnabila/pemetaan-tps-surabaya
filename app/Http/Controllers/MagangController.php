@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Magang;
 use Illuminate\Http\Request;
-use GeoJson\Geometry\Point;
-
+use Illuminate\Support\Facades\Redirect;
 
 class MagangController extends Controller
 {
@@ -35,27 +34,38 @@ class MagangController extends Controller
 
     public function store(Request $request)
     {
+
         $magang = Magang::create([
             'tempat_magang' => $request->input('tempat-magang'),
             'longitude' => $request->input('longitude'),
             'latitude' => $request->input('latitude'),
             'alamat' => $request->input('alamat'),
             'kecamatan' => $request->input('kecamatan'),
-            'deskripsi' => $request->input('deskripsi')
+            'deskripsi' => $request->input('deskripsi'),
+            'path_gambar' => $request->file('gambar')->store('post-images')
         ]);
 
-        if ($magang) {
-            return response()->json([
-                'status' => true,
-                'message' => 'Data berhasil ditambahkan',
-                'data' => $magang,
-            ], 200);
-        } else {
-            return response()->json([
-                'success' => false,
-                'message' => 'Data gagal disimpan!',
-            ], 401);
-        }
+        // if ($magang) {
+        //     return response()->json([
+        //         'status' => true,
+        //         'message' => 'Data berhasil ditambahkan',
+        //         'data' => $magang,
+        //     ], 200);
+        // } else {
+        //     return response()->json([
+        //         'success' => false,
+        //         'message' => 'Data gagal disimpan!',
+        //     ], 401);
+        // }
+
+        return redirect('/tambahData');
+    }
+
+    public function getTotalData()
+    {
+        $totalData = Magang::table('magangs')->count();
+
+        return $totalData;
     }
 
     /**
