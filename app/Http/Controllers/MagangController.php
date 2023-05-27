@@ -44,20 +44,6 @@ class MagangController extends Controller
             'deskripsi' => $request->input('deskripsi'),
             'path_gambar' => $request->file('gambar')->store('post-images')
         ]);
-
-        // if ($magang) {
-        //     return response()->json([
-        //         'status' => true,
-        //         'message' => 'Data berhasil ditambahkan',
-        //         'data' => $magang,
-        //     ], 200);
-        // } else {
-        //     return response()->json([
-        //         'success' => false,
-        //         'message' => 'Data gagal disimpan!',
-        //     ], 401);
-        // }
-
         return redirect('/tambahData');
     }
 
