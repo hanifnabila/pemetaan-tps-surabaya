@@ -3,11 +3,11 @@
 @section('container')
 <div class="card">
     <div class="card-header">
-      Total TPS
+      Total Magang
     </div>
     <div class="card-body">
-      <h5 class="card-title">Total TPS Saat Ini</h5>
-      <h6 class="card-text">133</h6>
+      <h5 class="card-title">Total Magang Saat Ini</h5>
+      <h6 class="card-text">46</h6>
       {{-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> --}}
 
       <a href="/daftarTps" class="btn btn-primary">Lihat Detail</a>
