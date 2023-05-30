@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="{{ asset('css/styleMaps.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -83,7 +85,8 @@
                                 <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Selamat Siang</h6>
                             </div>
                             <div class="unlimited-access-img">
-                                <img src="{{ asset('images/backgrounds/rocket.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('images/backgrounds/rocket.png') }}" alt=""
+                                    class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -111,8 +114,8 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ asset('images/profile/user-1.jpg') }}" alt="" width="35" height="35"
-                                        class="rounded-circle">
+                                    <img src="{{ asset('images/profile/user-1.jpg') }}" alt="" width="35"
+                                        height="35" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                                     aria-labelledby="drop2">
