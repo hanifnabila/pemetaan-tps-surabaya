@@ -17,6 +17,7 @@ class Magang extends Model
         'kecamatan',
         'deskripsi',
         'posisi',
+        'domain',
         'path_gambar'
     ];
 
