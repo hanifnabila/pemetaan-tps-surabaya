@@ -13,6 +13,9 @@ Route::get('/tambahData', function () {
 Route::get('/maps', function () {
     return view('maps');
 });
+Route::get('/index', function () {
+    return view('index');
+});
 Route::apiResource('magang', MagangController::class);
 Route::get('/titik/json', [MagangController::class, 'titik']);
 Route::get('/titik/lokasi/{id}', [MagangController::class, 'lokasi']);

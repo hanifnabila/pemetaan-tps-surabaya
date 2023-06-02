@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
+    <h1>Pemetaan Lokasi Magang</h1>
     <div class="col-12">
 
         <div id="map" style="width: 1000px; height: 530px"></div>
@@ -8,15 +9,15 @@
         <script>
             var map = L.map('map').setView([-7.250445, 112.768845], 13);
 
-            // L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
-            //     maxZoom: 20,
-            //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-            // }).addTo(map);
-
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
                 maxZoom: 20,
-                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
             }).addTo(map);
+
+            // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            //     maxZoom: 20,
+            //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            // }).addTo(map);
 
             $(document).ready(function() {
                 $.getJSON('titik/json', function(data) {

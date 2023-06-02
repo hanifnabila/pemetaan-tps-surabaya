@@ -9,7 +9,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Total Perusahaan saat ini</h5>
-                    <h6 class="card-text">46</h6> <a href="{{ asset('magang') }}" class="btn btn-primary">Lihat
+                    <h6 class="card-text">13</h6> <a href="{{ asset('magang') }}" class="btn btn-primary">Lihat
                         Detail</a>
                 </div>
             </div>

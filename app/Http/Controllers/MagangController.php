@@ -34,17 +34,18 @@ class MagangController extends Controller
 
     public function store(Request $request)
     {
-
-        $magang = Magang::create([
+        Magang::create([
             'tempat_magang' => $request->input('tempat-magang'),
             'longitude' => $request->input('longitude'),
             'latitude' => $request->input('latitude'),
             'alamat' => $request->input('alamat'),
             'kecamatan' => $request->input('kecamatan'),
+            'posisi' => $request->input('posisi'),
             'deskripsi' => $request->input('deskripsi'),
+            'domain' => $request->input('domain'),
             'path_gambar' => $request->file('gambar')->store('post-images')
         ]);
-        return redirect('/tambahData');
+        return redirect()->back()->with('success', 'Data berhasil disimpan.');
     }
 
     public function getTotalData()

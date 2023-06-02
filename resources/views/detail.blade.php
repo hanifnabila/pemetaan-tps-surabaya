@@ -3,12 +3,12 @@
 @section('title', 'Detail Informasi')
 
 @section('container')
+    <h1>Detail Informasi</h1>
     <img style="width:150px;"
         src="{{ asset('storage/' . $data->path_gambar) }}"
         alt="">
-    <h1>Nama Magang</h1>
-    <h6>Domainwebsite.com</h6>
-    <h6>di Kota Kediri</h6>
+    <h3>{{ $data->tempat_magang }}</h3>
+    <a href="{{ $data->domain }}">{{ $data->domain }}</a>
     <hr>
     <h6>Periode Kegiatan</h6>
     <p>6 Bulan</p>
